@@ -3,7 +3,12 @@ GET http://localhost:8080
 ###
 
 POST http://localhost:8080/users/register
+Content-Type: application/json
 
+{
+    "email": "Tnam5522@gmail.com",
+    "password": "12345678"
+}
 ###
 POST http://localhost:8080/users/refresh-token
 

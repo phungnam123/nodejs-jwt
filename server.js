@@ -4,7 +4,10 @@ const express = require('express')
 const app = express()
 const createError = require('http-errors')
 const userRoute = require('./routes/user.route')
+require('./helpers/connection_mongodb')
 
+app.use(express.json())
+app.use(express.urlencoded({ extends: true }))
 app.get('/', (req, res, next) => {
   res.send('Home Page')
 })
