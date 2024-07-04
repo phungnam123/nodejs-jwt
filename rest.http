@@ -17,8 +17,9 @@ POST http://localhost:8080/users/login
 Content-Type: application/json
 
 {
-    "email": "nam12325@gmail.com",
-    "password": "namms1000@123"
+    "email": "nam@gmail.com",
+    "password": "namms1000@1232"
 }
+###
 ###
 POST http://localhost:8080/users/logout

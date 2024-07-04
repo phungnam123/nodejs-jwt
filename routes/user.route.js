@@ -3,6 +3,7 @@ const router = express.Router()
 const User = require('../models/User.model')
 const createError = require('http-errors')
 const { userValidate } = require('../helpers/validation')
+const { signAcessToken } = require('../helpers/jwt_service')
 
 router.post('/register', async (req, res, next) => {
   try {
@@ -55,7 +56,8 @@ router.post('/login', async (req, res, next) => {
       throw createError.Unauthorized()
     }
 
-    res.json(user)
+    const accessToken = await signAcessToken(user._id)
+    res.json({ accessToken })
   } catch (error) {
     next(error)
   }
