@@ -6,7 +6,7 @@ POST http://localhost:8080/users/register
 Content-Type: application/json
 
 {
-    "email": "nam@gmail.com",
+    "email": "nam1@gmail.com",
     "password": "namms1000@1232"
 }
 ###
@@ -17,9 +17,12 @@ POST http://localhost:8080/users/login
 Content-Type: application/json
 
 {
-    "email": "nam@gmail.com",
+    "email": "nam1@gmail.com",
     "password": "namms1000@1232"
 }
 ###
-###
 POST http://localhost:8080/users/logout
+
+###
+GET http://localhost:8080/users/getList
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njg1ODJlZmZmZGZhNjQ2MDYxMzY4MGUiLCJpYXQiOjE3MjAxNjQzNjgsImV4cCI6MTcyMDE2NDM3OH0.iIXtTcEuPxMuXJfXo4c9RabNbvrxp5gASGacutFr0Qc
